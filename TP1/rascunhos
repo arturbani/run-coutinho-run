@@ -1,0 +1,10 @@
+
+
+//**********Inicializar quadrado com ponteiro(Obs:Struct).
+// void incializarQuadrado(ponto* a ,float xa,float ya ){
+//     &(*a).x = xa;
+//     &(*a).y = ya;
+//     //a.id = ida;
+//
+//
+// }
