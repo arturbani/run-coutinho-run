@@ -6,16 +6,17 @@
 #include <math.h>
 #include <time.h>
 
+//Base: {
+
 int init=1;//Somente para a inicialização(TESTE).
 int MovimentarOn=0; //Define se o movimento esta ativo (Tecla C) (TESTE)
 int ColisaoObjeto=0;
 
 int timer =24;
 
-
 float velocidade = 1;
 
-
+float aspect; //Ainda não mexi, para arrumar o AspectRatio(TESTE).
 
 typedef struct Quadrado{
     float x;
@@ -27,12 +28,14 @@ typedef struct Quadrado{
 
 }quadrado;
 
-quadrado q1,q2,q3;
-
-float aspect;
+quadrado q1,q2,q3,q4;
 
 
+//
 
+
+
+//Funções Base: {
 void posQuadrado(quadrado* a ,float xa,float ya ){
     a->x = xa;
     a->y = ya;
@@ -52,11 +55,21 @@ void corQuadrado(quadrado *a,float r,float g,float b){
 
 }
 
+//}
 
 void verificaColisao(quadrado *a){
-  if(q1.x+q1.tx >= a->x )
+  if(q1.x+q1.tx >= a->x && q1.y<=a->y+a->ty)
     MovimentarOn = 0;
 
+
+}
+
+
+void verificaPosicao(quadrado *a){
+  //Reposicionar o objeto caso ele tenha saido de Cena (para os quadrados "inimigos"),
+  //if(a-> < tamMundo) //Mudar depois para variável global
+  if( a-> x < 0 )
+    posQuadrado(a,90,30);
 
 
 
@@ -64,11 +77,11 @@ void verificaColisao(quadrado *a){
 
 
 
-
 //             (quadrado, velocidade)
-void movimenta(quadrado *a){
-  a->x-=velocidade;
-
+void movimenta(){
+  q2.x-=velocidade;
+  q3.x-=velocidade;
+  q4.x-=velocidade;
 
 }
 
@@ -76,7 +89,7 @@ void movimenta(quadrado *a){
 
 void atualiza(int timer){
   if (MovimentarOn==1){
-      movimenta(&q2);
+      movimenta();
   }
 
 
@@ -94,8 +107,11 @@ void atualiza(int timer){
 void desenhaQuadrado(quadrado* a){
     glColor3f(a->r,a->g,a->b);
 
-    if(a!=&q1) //Para nao verificar a colisão no próprio q1(TESTE)
-    verificaColisao(a);
+
+    //Para nao verificar a colisão no próprio q1(TESTE)
+    //if(a!=&q1)
+    verificaPosicao(a);
+    //verificaColisao(a);
 
     glBegin(GL_TRIANGLE_FAN);
 
@@ -117,6 +133,8 @@ void desenhaCena(){
 
   desenhaQuadrado(&q1);
   desenhaQuadrado(&q2);
+   desenhaQuadrado(&q3);
+   desenhaQuadrado(&q4);
 
   glutSwapBuffers();
 
@@ -170,16 +188,25 @@ void initQuadrado(){
   init++;
   tamQuadrado(&q1,10,15);
   posQuadrado(&q1,0,30);
-  corQuadrado(&q1,.4,.3,.2);
+  corQuadrado(&q1,1,1,1);
 
   tamQuadrado(&q2,10,10);
   posQuadrado(&q2,90,30);
   corQuadrado(&q2,.1,.3,.9);
+
+  tamQuadrado(&q3,10,10);
+  posQuadrado(&q3,120,30);
+  corQuadrado(&q3,.8,.5,.1);
+
+  tamQuadrado(&q4,10,10);
+  posQuadrado(&q4,150,30);
+  corQuadrado(&q4,.8,.3,.9);
+
   }
 }
 
 void inicializa(){
-  glClearColor(1,1,1,0);
+  glClearColor(.9,.9,.9,0);
 }
 
 
