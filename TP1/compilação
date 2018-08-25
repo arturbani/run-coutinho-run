@@ -1,0 +1,4 @@
+gcc test.c -lglut -lGLU -lGL -lSOIL -lm
+gcc ("Nome do arquivo.c) -lglut -lGLU -lGL -lSOIL -lm
+-lglut -lGLU -lGL -lSOIL -lm
+
