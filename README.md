@@ -1,1 +1,6 @@
 # tp1-cg
+
+A simple "endless runner" game for a Computer Graphics assingment, built with C (for now, we will try to migrate to C++) and OpenGL.
+
+Made by Rodrigo Gomes and Artur Bani.
+
