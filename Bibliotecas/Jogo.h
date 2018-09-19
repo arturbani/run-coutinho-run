@@ -1,0 +1,25 @@
+void chama_mudaCorrida(int mudaCorridaTimer);
+void chama_aumentaScore(int aumentaScoreTimer);
+void inicializa();
+void SpecialKeys(int key, int x, int y);
+void keyboard(unsigned char key, int x, int y);
+void resetAll();    //Da para colocar um variavel para avisar se volta em movimento ou nao
+void initQuadrado();
+void redimensiona(int width, int height);
+void desenhaMenu();
+void desenhaCena();
+void seletorCena();
+void desenhaFundo();
+void desenhaQuadrado(quadrado* a);
+void verificaTextura(int timer);
+void reposiciona_seta(quadrado * seta);
+void atualiza(int fpstimer);
+void rolar(quadrado * a);
+void movimentaInimigos();
+void verificaTipo(quadrado *a);
+void verificaPosicao(quadrado *a);
+void jogadorAnimacao_Morte(quadrado *Jogador, int *animacaoMorteOn);
+void respawnMoeda();
+void eventoRespawn(quadrado *a);
+void inicializaTextura();
+void Jogo();
