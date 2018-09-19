@@ -1,4 +1,5 @@
 #include <GL/glew.h>
+#include <GL/glut.h>
 #include <GL/freeglut.h>
 #include <SOIL/SOIL.h>
 #include <stdio.h>
@@ -6,7 +7,14 @@
 #include <string.h>
 #include <math.h>
 #include <time.h>
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_mixer.h>
 #include "structs.h"
+#include "structs_functions.h"
 #include "texto.h"
-#include "verificar.h"
-// #include "pulo.h"
+#include "telas.h"
+#include "mecanicas.h"
+#include "animacao.h"
+// #include "powerup.h" //Nao implementada
+#include "Jogo.h"
+#include "Main.h"
