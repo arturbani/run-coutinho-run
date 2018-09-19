@@ -22,7 +22,7 @@ Bibliotecas extras utilizadas:
  - SDL2
  - SDL2-Mixer
 
-### Caso estejam utilizando o Ubuntu, podem instalar por meio desse comando:
+### Caso estejam utilizando o Ubuntu, podem instalá-las por meio desses comandos:
     sudo apt-get install libsdl2-dev
     sudo apt-get install libsdl2-mixer-dev
     sudo apt-get install libsdl-mixer1.2-dev
