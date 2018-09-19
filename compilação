@@ -1,0 +1,13 @@
+gcc test.c -lglut -lGLU -lGL -lSOIL -lm
+gcc ("Nome do arquivo.c) -lglut -lGLU -lGL -lSOIL -lm
+-lglut -lGLU -lGL -lSOIL -lm
+
+gcc main.c structs.c verificar.c texto.c respawn.c -lglut -lGLU -lGL -lSOIL -lm
+
+
+sudo apt-get install libsdl2-dev
+sudo apt-get install libsdl2-mixer-dev
+sudo apt-get install libsdl-mixer1.2-dev
+
+
+
