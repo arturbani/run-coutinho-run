@@ -28,7 +28,7 @@ Bibliotecas extras utilizadas:
     sudo apt-get install libsdl-mixer1.2-dev
 
 Para compilar o programa, execute o Makefile disponível por meio do comando **make run**.
-### Caso prefira o comando para compilar manualmente usando o GCC é:
+### Caso prefira, o comando para compilar manualmente usando o GCC é:
  - gcc main.c structs.c mecanicas.c texto.c animacao.c Jogo.c telas.c -lglut -lGLU -lSOIL -lGLEW -lGL -lm -lSDL2 -lSDL2_mixer
 
 
