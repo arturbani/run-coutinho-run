@@ -1,26 +1,9 @@
-void texto(void* font, char* s, float x, float y){
-  unsigned int i;
-  glRasterPos2f(x, y);
 
-  for (i=0; i<strlen(s); i++){
-      glutBitmapCharacter(font, s[i]);
-    }
-}
+void texto(void* font, char* s, float x, float y);
 
-void telaFim(){
-glColor4f(0, 0, 0, 0.1);
+char *my_itoa(int num, char *str);
 
-glBegin(GL_POLYGON);
+void mostraScore(int score, float x, float y);
 
-  glVertex2d(0, 0);
-  glVertex2d(0, 100);
-  glVertex2d(100, 100);
-  glVertex2d(100, 0);
-
-glEnd();
-
-glColor3f(0, 0, 0);
-texto(GLUT_BITMAP_HELVETICA_18, "PERDEU OTARIO!", 25, 50);
-
-
-}
+//Depois Mudar de Lugar(Temporário);
+void GameOver(int* MovimentarOn,int *theEnd);
