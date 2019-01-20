@@ -11,9 +11,9 @@ Run, Coutinho, Run! é um jogo do tipo 'Endless Runner' programado em C, usando 
 
 O jogo possui sprites próprias para o personagem principal (Coutinho) e design próprio (Texturas de menus, opções e popups). O restante são sprites de jogos conhecidos e artistas desconhecidos.
 
-###Caso você seja o dono de alguma textura usada, por favor entrar em contato por meio do perfil de um dos criadores no GitHub ou por email (arturbani@gmail.com ou rgomesms227@gmail.com) para que possamos colocar os créditos!
+### Caso você seja o dono de alguma textura usada, por favor entrar em contato por meio do perfil de um dos criadores no GitHub ou por email (arturbani@gmail.com ou rgomesms227@gmail.com) para que possamos colocar os créditos!
 
-###If you own any texture used in the game, please contact us here or by e-mail (arturbani@gmail.com or rgomesms227@gmail.com), so we can give you proper credits!
+### If you own any texture used in the game, please contact us here or by e-mail (arturbani@gmail.com or rgomesms227@gmail.com), so we can give you proper credits!
 
 ## Instalação e como jogar:
 Certifique-se que possui as bibliotecas **freeglut**, **glew** e **SOIL** instaladas! 
